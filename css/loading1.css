@@ -1,0 +1,161 @@
+@font-face {
+    font-family: daughter;
+    src: url(../fonts/ArchitectsDaughter-Regular.ttf);
+}
+
+:root{
+    --gold-color: #FEC838;
+    --orange-color: #FF7B08;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: daughter;
+    user-select: none;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url(../images/Background\ \ Alphabets.png);
+    background-position: center;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    text-align: center;
+}
+
+.title p{
+    font-size: 96px;
+    color: var(--gold-color);
+    -webkit-text-stroke: 2px var(--orange-color);
+    /* -webkit-text-fill-color: transparent; */
+    position: relative;
+    
+}
+
+
+.loading-dots p{
+    font-size: 196px;
+    color: var(--gold-color);
+    animation: load 3s ease-in-out infinite;
+    
+}
+
+.title p span{
+    display: inline-block;
+    rotate: 30deg;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    right: -38px;
+}
+
+@keyframes load {
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.container1{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url(../images/Background\ \ Alphabets.png);
+    background-position: center;
+    background-size: contain;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#tagline{
+    margin-top: 50px;
+    font-size: 48px; 
+    -webkit-text-stroke: 0.5px var(--orange-color)
+}
+
+.buttons{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.buttons > div{
+    background: url(../images/button1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 300px;
+    aspect-ratio: 211/80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons > div:hover{
+    opacity: 75%;
+}
+
+.theme-list{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.theme-list .theme{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px rgb(0, 0, 0);
+    border: 3px transparent solid;
+}
+
+.theme-list .theme:hover{
+    opacity: 90%;
+    scale: 120%;
+    transition: all ease-in-out 0.2s;
+}
+
+.theme-list .theme.selected{
+    border-color: var(--gold-color);
+}
+
+.theme-list #theme1{
+    background-color: #5C6C75;
+}
+
+.theme-list #theme2{
+    background-color: #FFFFFF;
+}
+
+.theme-list #theme3{
+    background-color: #0E0E0E;
+}
+
+.theme-list #theme4{
+    background-color: #344B00;
+}
+
+
+
+

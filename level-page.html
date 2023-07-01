@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word World War</title>
+    <link rel="stylesheet" href="./css/loading1.css">
+</head>
+<body onload="initState()">
+    <div class="container1">
+        <div class="title">
+            <p>Word World War</p>
+            <p id="tagline">Choose your Level</p>
+        </div>
+        
+        <div class="buttons">
+            <div class="game" id="game1">
+                <p>Rookie</p>
+            </div>
+            <div class="game"  id="game2">
+                <p>Expert</p>
+            </div>
+            <div class="game"  id="game3">
+                <p>Legend</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const body = document.getElementsByTagName("body")[0]
+        function initState(){
+            let themeState = localStorage.getItem("themeState") && JSON.parse(localStorage.getItem("themeState")) 
+            if(themeState){
+                body.style.backgroundColor = themeState.bgColor
+
+            }
+        }
+    </script>
+    <script src="./js/level.js"></script>
+</body>
+</html>

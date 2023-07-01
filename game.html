@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word World War</title>
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+<body onload="initState()">
+    <div class="container">
+        <div class="title">
+            <p>Word World War</p>
+        </div>
+        <div class="table">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th></t>
+                        <th id="score-heading">You are a fool</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="player1-name" class="player-name">Player 1</td>
+                        <td id="player1-score"></td>
+                    </tr>
+                    <tr>
+                        <td id="player2-name" class="player-name">Player 2</td>
+                        <td id="player2-score"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="input-box">
+            <p id="word-bar">Machine</p>
+        </div>
+        <div class="alphabets">
+            <div class="alphabet-row">
+                <div id="A">
+                    <p>A</p>
+                </div>
+                <div id="B">
+                    <p>B</p>
+                </div>
+                <div id="C">
+                    <p>C</p>
+                </div>
+                <div id="D">
+                    <p>D</p>
+                </div>
+                <div id="E">
+                    <p>E</p>
+                </div>
+                <div id="F">
+                    <p>F</p>
+                </div>
+                <div id="G">
+                    <p>G</p>
+                </div>
+            </div>
+            <div class="alphabet-row">
+                <div id="H">
+                    <p>H</p>
+                </div>
+                <div id="I">
+                    <p>I</p>
+                </div>
+                <div id="J">
+                    <p>J</p>
+                </div>
+                <div id="K">
+                    <p>K</p>
+                </div>
+                <div id="L">
+                    <p>L</p>
+                </div>
+                <div id="M">
+                    <p>M</p>
+                </div>
+                <div id="N">
+                    <p>N</p>
+                </div>
+            </div>
+            <div class="alphabet-row">
+                <div id="O">
+                    <p>O</p>
+                </div>
+                <div id="P">
+                    <p>P</p>
+                </div>
+                <div id="Q">
+                    <p>Q</p>
+                </div>
+                <div id="R">
+                    <p>R</p>
+                </div>
+                <div id="S">
+                    <p>S</p>
+                </div>
+                <div id="T">
+                    <p>T</p>
+                </div>
+                <div id="U">
+                    <p>U</p>
+                </div>
+            </div>
+            <div class="alphabet-row-last">
+                <div id="V">
+                    <p>V</p>
+                </div>
+                <div id="W">
+                    <p>W</p>
+                </div>
+                <div id="X">
+                    <p>X</p>
+                </div>
+                <div id="Y">
+                    <p>Y</p>
+                </div>
+                <div id="Z">
+                    <p>Z</p>
+                </div>
+            </div>
+        </div>
+        <div class="play-buttons">
+            <div class="complete">
+                <img id="complete-it-button" src="./images/Complete It! Button.png" alt="">
+            </div>
+            <div class="play">
+                <p id="play-button">Play</p>
+            </div>
+            <div class="its-a-word">
+                <img id="its-a-word-button" src="./images/Its a Word! Button.png" alt="">
+            </div>
+        </div>
+        <div class="quit-button">
+            <p id="quit-button">Quit</p>
+        </div>
+    </div>
+    
+
+    <script>
+        const body = document.getElementsByTagName("body")[0]
+        function initState(){
+            let themeState = localStorage.getItem("themeState") && JSON.parse(localStorage.getItem("themeState")) 
+            if(themeState){
+                body.style.backgroundColor = themeState.bgColor
+
+            }
+        }
+    </script>
+</body>
+</html>
